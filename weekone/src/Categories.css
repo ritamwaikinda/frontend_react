@@ -1,0 +1,78 @@
+.columns {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    width: 288px;
+    height: 272px;
+    justify-content: space-between;
+
+}
+
+.categories {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 288px;
+    height: 56px;
+    font-size: 18px;
+    line-height: 23px;
+    font-weight: 500;
+    border-radius: 12px;
+}
+
+.reaction {
+    color: #FF5555;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)), #FF5555;
+}
+
+.memory {
+    color: #FFB21E;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)), #FFB21E;
+}
+
+.verbal {
+    color: #00BB8F;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)), #00BB8F;
+}
+
+.visual {
+    color: #1125D6;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)), #1125D6;
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+    margin: 16px 10px 16px 16px;
+}
+
+.score {
+    display: flex;
+    flex-direction: row;
+    width: 82px;
+    height: 23px;
+    font-size: 18px;
+    line-height: 23px;
+    margin-right: 0px;
+    margin-left: auto;
+}
+
+.numerator {
+    color: #303B59
+}
+
+.denominator {
+    width: 48px;
+    height: 23px;
+    color: #303B59;
+    opacity: 0.5;
+}
+
+
+@media only screen and (max-width: 680px) {
+    .categories,
+    .score {
+        font-size: 16px;
+        line-height: 20.85px;
+    }
+}

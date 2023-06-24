@@ -1,0 +1,268 @@
+.App {
+  text-align: center;
+}
+@font-face {
+  font-family: "HankenGrotesk-VariableFont";
+  src: local("HankenGrotesk-VariableFont"),
+    url("./assets/fonts/HankenGrotesk-VariableFont_wght.ttf") format("opentype");
+}
+
+@font-face {
+  font-family: "Hanken Grotesk";
+  src: local("Hanken Grotesk"),
+    url("./assets/fonts/HankenGrotesk-VariableFont_wght.ttf") format("opentype");
+}
+
+@font-face {
+  font-family: "HankenGrotesk-Bold";
+  src: local("HankenGrotesk-Bold"),
+    url("./assets/fonts/static/HankenGrotesk-Bold.ttf") format("opentype");
+}
+
+@font-face {
+  font-family: "HankenGrotesk-ExtraBold";
+  src: local("HankenGrotesk-ExtraBold"),
+    url("./assets/fonts/static/HankenGrotesk-ExtraBold.ttf") format("opentype");
+}
+
+@font-face {
+  font-family: "HankenGrotesk-Medium";
+  src: local("HankenGrotesk-Medium"),
+    url("./assets/fonts/static/HankenGrotesk-Medium.ttf") format("opentype");
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Hanken Grotesk';
+  font-style: normal;
+  font-weight: 800;
+  background-color: #ECF2FF;
+  margin: 8px;
+}
+
+.card {
+  width: 736px;
+  height: 512px;
+  display: flex;
+  flex-direction: row;
+  background: #FFFFFF;
+  box-shadow: 0px 30px 60px rgba(61, 108, 236, 0.15);
+  border-radius: 32px;
+}
+
+.leftCopy {
+  align-self: center;
+  color: white;
+}
+
+/* Left side of card */
+.leftPanel {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  background: linear-gradient(180deg, #7755FF 0%, #6943FF 0.01%, #2F2CE9 100%);
+  border-radius: 32px;
+}
+
+.title.leftCopy {
+  font-size: 24px;
+  line-height: 31px;
+  color: #CAC9FF;
+}
+
+.circle {
+  height: 200px;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100px;
+  background: linear-gradient(180deg, #4D21C9 0%, rgba(37, 33, 201, 0) 100%, rgba(37, 33, 201, 0) 100%);
+}
+
+.result {
+  display: flex;
+  flex-direction: column;
+  width: 81px;
+  height: 99px;
+  align-items: center;
+  justify-content: center;
+}
+
+.total {
+  font-size: 72px;
+  line-height: 72px;
+  height: 72px;
+  width: 81px;
+  text-align: center;
+  color: #FFFFFF;
+
+}
+
+.subTotal {
+  height: 23px;
+  width: 52px;
+  text-align: center;
+  font-size: 18px;
+  line-height: 23.45px;
+  color: #CAC9FF;
+}
+
+.announcement {
+  width: 260px;
+  height: 134px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.achievement {
+  width: 83px;
+  height: 42px;
+  font-size: 32px;
+  line-height: 41.7px;
+  text-align: center;
+}
+
+.summary {
+  width: 260px;
+  height: 69px;
+  font-size: 18px;
+  line-height: 23.45px;
+  color: #CAC9FF;
+  text-align: center;
+  margin-top: 14px;
+}
+
+
+/* Right side of card */
+.rightPanel {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 50%;
+}
+
+.title.rightCopy {
+  font-size: 24px;
+  line-height: 31.27px;
+  color: #303B59;
+  width: 104px;
+  height: 31px;
+  margin-left: 29px;
+}
+
+.button {
+  align-self: center;
+  width: 288px;
+  height: 56px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 53px;
+  text-align: center;
+  color: #FFFFFF;
+  background: #303B59;
+  border-radius: 128px;
+  filter: drop-shadow(0px 30px 60px rgba(61, 108, 236, 0.15));
+
+}
+
+.button:hover,
+.button:active {
+  background: linear-gradient(180deg, #7755FF 0%, #6943FF 0.01%, #2F2CE9 100%);
+  cursor: url(./assets/pointer.png), pointer;
+}
+
+
+@media only screen and (max-width: 680px) {
+  .card {
+    width: 375px;
+    height: 809px;
+    display: flex;
+    flex-direction: column;
+    background: #FFFFFF;
+    box-shadow: 0px 30px 60px rgba(61, 108, 236, 0.15);
+    border-radius: 0px;
+  }
+
+  /* Left side of card */
+  .leftPanel {
+    width: 100%;
+    height: 356px;
+    border-radius: 0px 0px 32px 32px;
+  }
+
+  .title.leftCopy {
+    font-size: 18px;
+    line-height: 23.45px;
+    color: #CAC9FF;
+    margin-top: -15px;
+  }
+
+  .circle {
+    height: 140px;
+    width: 140px;
+    margin-top: -16px;
+  }
+
+  .result {
+    width: 63px;
+    height: 93px;
+  }
+
+  .total {
+    font-size: 56px;
+    width: 63px;
+
+  }
+
+  .subTotal {
+    height: 21px;
+    width: 46px;
+    font-size: 16px;
+    line-height: 20.85px;
+  }
+
+  .announcement {
+    height: 81px;
+    margin-top: -25px;
+  }
+
+  .achievement {
+    width: 63px;
+    height: 31px;
+    font-size: 24px;
+    line-height: 31px;
+    font-weight: 700;
+  }
+
+  .summary {
+    height: 42px;
+    font-size: 16px;
+    line-height: 21px;
+    font-style: normal;
+    font-weight: 500;
+    margin-top: 8px;
+  }
+
+  /* Right side of card */
+  .rightPanel {
+    width: 100%;
+    height: 435px;
+    margin-top: 5px;
+  }
+
+  .title.rightCopy {
+    font-size: 18px;
+    line-height: 23px;
+  }
+  
+  .button {
+    margin-top: 8px;
+  }
+}
