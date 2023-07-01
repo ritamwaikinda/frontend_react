@@ -1,0 +1,11 @@
+.title {
+    width: 86.664px;
+    height: 53.136px;
+}
+
+@media only screen and (max-width: 375px) {
+    .title {
+        width: 86.66px;
+        height: 53.14px;
+    }
+}

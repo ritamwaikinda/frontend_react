@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+body,
+.calculator,
+.inputs,
+.bill,
+.percentage,
+.people,
+.input,
+.number,
+.percentageSelector,
+.selectionCopy,
+.result,
+.returns,
+.resetCopy {
+  display: flex;
+
+  &:not(.calculator,
+    .input,
+    .returns, .percentageSelector) {
+    flex-direction: column;
+  }
+}
+
+.calculator,
+.input,
+.returns {
+  flex-direction: row;
+}
+
+.inputs,
+.bill,
+.percentage,
+.people,
+.input,
+.percentageSelector {
+  width: 379px;
+}
+
+body {
+  width: 1440px;
+  padding: 163px 260px 239px 260px;
+  align-items: center;
+  gap: 87.864px;
+  background: #C5E4E7;
+  font-family: Space Mono;
+  font-weight: 700;
+}
+
+.calculator {
+  width: 920px;
+  height: 481px;
+  border-radius: 25px;
+  background: #FFF;
+  box-shadow: 0px 32px 43px 0px rgba(79, 166, 175, 0.20);
+}
+
+.bill {
+  height: 78px;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 6px;
+}
+
+.people {
+  height: 78px;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 6px;
+}
+
+.amount {
+  height: 71px;
+  width: auto;
+  color: #26C2AE;
+  text-align: right;
+  font-size: 48px;
+  letter-spacing: -1px;
+
+}
+
+
+@media only screen and (max-width: 375px) {
+      body,
+        .calculator {
+          width: 375px;
+        }
+      
+        .reset,
+        .returns {
+          width: 281px;
+        }
+      
+        .inputs,
+        .bill,
+        .percentage,
+        .people,
+        .input,
+        .percentageSelector {
+          width: 311px;
+        }
+      
+        body {
+          height: 883px;
+          padding: 50px 0px 0px 0px;
+          justify-content: flex-end;
+          gap: 40.864px;
+          margin: 0px;
+        }
+
+        .calculator {
+          height: 789px;
+          border-radius: 25px 25px 0px 0px;
+          flex-direction: column;
+        }
+
+        .inputs {
+          margin: 32px 32px auto 32px;
+          gap: 32px;
+        }
+
+        .amount {
+          height: 47px;
+          font-size: 32px;
+          letter-spacing: -0.667px;
+
+        }
+}

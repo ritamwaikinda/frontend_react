@@ -1,0 +1,11 @@
+.input {
+    height: 48px;
+    border-radius: 5px;
+    background: #F3F9FA;
+}
+
+.bill .input:active,
+.people .input:active {
+    border: 2px solid #26C2AE;
+    cursor: url("../../images/finger.svg");
+}

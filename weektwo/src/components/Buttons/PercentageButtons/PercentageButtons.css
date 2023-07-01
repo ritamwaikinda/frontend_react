@@ -1,0 +1,92 @@
+.selections {
+    width: 117px;
+    height: 48px;
+    border-radius: 5px;
+    background: #00474B;
+}
+
+/*favorite piece of css. learned aboout nested css, ampersands (as well as +, *, ~, > a bit) and level-4 pseudo-classes (:where(), :is(), :not() etc) and their specificities, adjacent and sibling selectors vs subsequent selectors are tricky (euuugh)   */
+.selections:active {
+    &:not(.custom) {
+        background: #9FE8DF;
+        /* cursor: url("./images/finger.svg"); */
+    }
+
+    & .selectionCopy {
+        color: #00474B;
+    }
+
+    &:not(.default) {
+        ~.default {
+            background: #00474B;
+        }
+
+        ~.default .selectionCopy {
+            color: #FFF;
+        }
+    }
+}
+
+/*selecting a previous element by using the previous element to call the next element's properties */
+.default:has(+ .selections:active),
+.default:has(+ * + .selections:active),
+.default:has(+ * + * + .selections:active) {
+    background: #00474B;
+
+    .selectionCopy {
+        color: #FFF;
+    }
+}
+
+.default {
+    background: #26C2AE;
+}
+
+.default .selectionCopy {
+    color: #00474B;
+}
+
+.custom {
+    background: #F3F9FA;
+}
+
+.selectionCopy::placeholder {
+    color: #547878;
+    opacity: 1 !important;
+}
+
+.custom .selectionCopy {
+    color: #547878;
+    width: 89px;
+    text-align: right;
+    margin: 6px 15px 6px 14px;
+}
+
+.selectionCopy {
+    width: 90px;
+    height: 36px;
+    color: #FFF;
+    text-align: center;
+    font-size: 24px;
+    margin: 6px 14px 6px 13px;
+}
+
+@media only screen and (max-width: 375px) {
+.selections {
+    width: 146.63px;
+}
+
+.custom {
+    width: 147.814px;
+}
+
+.custom .selectionCopy {
+    width: 111.487px;
+    margin: 6px 17.33px 6px 19px;
+}
+
+.selectionCopy {
+    width: 112.793px;
+    margin: 6px 17.55px 6px 16.29px;
+}
+}
