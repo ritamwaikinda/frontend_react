@@ -1,0 +1,76 @@
+.input, .number {
+  display: flex;
+  &:not(.calculator,
+    .input,
+    .returns, .percentageSelector) {
+    flex-direction: column;
+  }
+}
+
+.sectionHeader {
+  color: #5E7A7D;
+  font-size: 16px;
+}
+
+.sectionHeader {
+  color: #FFF;
+}
+
+.input {
+  flex-direction: row;
+}
+
+.input {
+  width: 379px;
+}
+
+input {
+  border: none;
+  background-color: inherit;
+  font-family: Space Mono;
+  font-weight: 700;
+  font-size: 24px;
+  text-align: right;
+  color: #00474B;
+  margin: 6px 17px 6px auto;
+  ;
+}
+
+input:focus-visible {
+  outline: none;
+}
+
+.input {
+  height: 48px;
+  border-radius: 5px;
+  background: #F3F9FA;
+}
+
+.icon.dollar {
+  width: 9.84px;
+  height: 15.456px;
+  margin: 16.87px auto 15.67px 19.26px;
+}
+
+.number::placeholder {
+  opacity: 0.3499999940395355;
+}
+
+.customSelected {
+  caret-color: #26C2AE;
+  outline: #26C2AE solid 2px;
+}
+
+@media only screen and (max-width: 375px) {
+    .sectionHeader {
+    color: #5E7A7D;
+  }
+
+    .input {
+    width: 311px;
+  }
+
+    .number {
+    margin: 6px 17.48px 6px -30px;
+  }
+}

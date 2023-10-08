@@ -1,0 +1,193 @@
+.selections {
+    width: 117px;
+    height: 48px;
+    border-radius: 5px;
+    background: #00474B;
+}
+
+/*favorite piece of css. learned aboout nested css, ampersands (as well as +, *, ~, > a bit) and level-4 pseudo-classes (:where(), :is(), :not() etc) and their specificities, adjacent and sibling selectors vs subsequent selectors are tricky (euuugh)   */
+.selections:active {
+    &:not(.custom) {
+        background: #9FE8DF;
+        cursor: url("../images/finger.svg");
+    }
+
+    & .selectionCopy {
+        color: #00474B;
+    }
+
+    &:not(.defaultStyle) {
+        ~.defaultStyle {
+            background: #00474B;
+        }
+
+        ~.defaultStyle .selectionCopy {
+            color: #FFF;
+        }
+    }
+}
+
+.defaultStyle {
+    background: #26C2AE;
+}
+
+.custom {
+    background: #F3F9FA;
+}
+
+/*selecting a previous element by using the previous element to call the next element's properties */
+.defaultStyle:has(+ .selections:active),
+.defaultStyle:has(+ * + .selections:active),
+.defaultStyle:has(+ * + * + .selections:active) {
+    background: #00474B;
+
+    .selectionCopy {
+        color: #FFF;
+    }
+}
+
+.selectionCopy {
+    display: flex;
+
+    &:not(.calculator,
+        .input,
+        .returns, .percentageSelector) {
+        flex-direction: column;
+    }
+}
+
+.defaultStyle .selectionCopy {
+    color: #00474B;
+}
+
+.selectionCopy::placeholder {
+    color: #547878;
+    opacity: 1 !important;
+}
+
+.custom .selectionCopy {
+    color: #547878;
+    width: 89px;
+    text-align: right;
+    margin: 6px 15px 6px 14px;
+}
+
+.selectionCopy {
+    width: 90px;
+    height: 36px;
+    color: #FFF;
+    text-align: center;
+    font-size: 24px;
+    margin: 6px 14px 6px 13px;
+}
+
+.percentage,
+.percentageSelector {
+    display: flex;
+
+    &:not(.calculator,
+        .input,
+        .returns, .percentageSelector) {
+        flex-direction: column;
+    }
+}
+
+.percentage,
+.percentageSelector {
+    width: 379px;
+}
+
+.percentage {
+    height: 152px;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.percentageSelector {
+    height: 112px;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+.sectionHeader {
+    color: #5E7A7D;
+    font-size: 16px;
+}
+
+
+.selectedBackground {
+    background: #9FE8DF;
+    /* style="background: #9FE8DF" */
+}
+
+.selectedColor{
+    color: #00474B
+    /* style="color: #00474B" */
+}
+
+.notSelectedBackground {
+    background: #00474B;
+}
+
+.notSelectedColor {
+    color: #ffffff;
+}
+
+.customSelected {
+    caret-color: #26C2AE;
+    outline: #26C2AE solid 2px;
+}
+
+@media only screen and (max-width: 375px) {
+
+.selections {
+    width: 146.63px;
+}
+
+.custom .selectionCopy {
+    width: 111.487px;
+    margin: 6px 17.33px 6px 19px;
+  }
+
+.selectionCopy {
+    width: 112.793px;
+    margin: 6px 17.55px 6px 16.29px;
+  }
+
+  .percentage,
+  .percentageSelector {
+      width: 311px;
+  }
+
+  .percentage {
+      height: 216px;
+  }
+
+  .percentageSelector {
+      height: 176px;
+  }
+
+  .sectionHeader {
+      color: #5E7A7D;
+  }
+
+  .custom {
+      width: 147.814px;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}

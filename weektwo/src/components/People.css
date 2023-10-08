@@ -1,0 +1,49 @@
+.people {
+    display: flex;
+
+    &:not(.calculator,
+        .input,
+        .returns, .percentageSelector) {
+        flex-direction: column;
+    }
+}
+
+.people{
+    width: 379px;
+}
+
+.people {
+    height: 78px;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 6px;
+}
+
+.icon.person {
+    width: 13px;
+    height: 16px;
+    margin: 16px auto 16px 17px;
+}
+
+.people .input:active {
+    border: 2px solid #26C2AE;
+    cursor: url("../images/finger.svg");
+}
+
+.peopleVerifier {
+    display: flex;
+    flex-direction: row;
+    width: inherit;
+    justify-content: space-between;
+}
+
+.errorMessage {
+    color: #E17457;
+    text-align: right;
+}
+
+@media only screen and (max-width: 375px) {
+    .people {
+        width: 311px;
+    }
+}

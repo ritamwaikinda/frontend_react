@@ -1,0 +1,31 @@
+.bill {
+    display: flex;
+
+    &:not(.calculator,
+        .input,
+        .returns, .percentageSelector) {
+        flex-direction: column;
+    }
+}
+
+.bill {
+    width: 379px;
+}
+
+.bill {
+    height: 78px;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 6px;
+}
+
+.bill .input:active {
+    border: 2px solid #26C2AE;
+    cursor: url("../images/finger.svg");
+}
+
+@media only screen and (max-width: 375px) {
+    .bill {
+        width: 311px;
+    }
+}
