@@ -30,9 +30,9 @@ button {
 
 body, .body {
   width: 1440px;
-  padding: 163px 260px 239px 260px;
   align-items: center;
-  gap: 87.864px;
+  padding-top: 21.966px;
+  gap: 51.932px;
   background: #C5E4E7;
   font-family: Space Mono;
   font-weight: 700;

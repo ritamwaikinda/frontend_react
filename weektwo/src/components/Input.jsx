@@ -35,7 +35,7 @@ function Input({
 				<input
 					type='text'
 					value={amount}
-					// className='number'
+					className='number'
 					placeholder='0'
 					onChange={handleChange}
 				/>
